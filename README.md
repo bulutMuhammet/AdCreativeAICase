@@ -2,7 +2,23 @@
 Background Remover with OpenCV Python
 See live demo at https://mbulut.pythonanywhere.com/
 
+A background can also be generated directly from text using libraries such as DALL·E. I was going to try that too but I didn't have the API key :)
 
+Here is example DALLE usage;
+
+```python
+import openai
+
+PROMPT = "Newyork city night time"
+
+openai.api_key = "API KEY"
+
+response = openai.Image.create(
+    prompt=PROMPT,
+    n=1,
+    size="256x256",
+)
+```
 
 # How does the system work? 
 
@@ -21,4 +37,4 @@ This is not a deep learning algorithm. So you may have to change the parameters 
 
 # As technology, python and opencv are used.
 
-A background can also be generated directly from text using libraries such as DALL·E. I was going to try that too but I didn't have the API key :)
+
